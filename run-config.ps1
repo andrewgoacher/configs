@@ -57,3 +57,6 @@ Start-SshAgent
 $global:GitPromptSettings.BeforeText = '['
 $global:GitPromptSettings.AfterText  = '] '
 
+# use NVim it's better
+set-alias vim nvim
+
