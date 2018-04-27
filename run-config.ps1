@@ -60,3 +60,35 @@ $global:GitPromptSettings.AfterText  = '] '
 # use NVim it's better
 set-alias vim nvim
 
+function gs {
+    git status
+}
+
+function gcob{
+    param
+    (
+        [string] $branch
+    )
+
+    git checkout -b "$branch"
+}
+
+function gcop {
+    param
+    (
+         [string] $branch
+    )
+
+    git checkout -b "$branch"
+    git push -u origin "$branch"
+}
+
+function gcp {
+    param
+    (
+        [string] $message
+    )
+
+    git commit -m "$message"
+    git push
+}
