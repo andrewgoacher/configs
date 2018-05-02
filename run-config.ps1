@@ -70,7 +70,7 @@ function gcob{
         [string] $branch
     )
 
-    git checkout -b "$branch"
+    git checkout "$branch"
 }
 
 function gcop {
@@ -91,4 +91,11 @@ function gcp {
 
     git commit -m "$message"
     git push
+}
+
+function helpme {
+    write-host "gs: git status"
+    write-host "gcob: git checkout <branch>"
+    write-host "gcop: git checkout -b <branch> && git push -u origin <branch>"
+    write-host "gcp: git commit -m <message> && git push"
 }
