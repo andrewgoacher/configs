@@ -33,3 +33,7 @@ $global:GitPromptSettings.AfterText  = '] '
 
 . $PSScriptRoot\admin.ps1
 . $PSScriptRoot\prompt.ps1
+
+
+# Mojo Mortgages settings:
+. $PSScriptRoot\aws.ps1
