@@ -26,14 +26,19 @@ Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 Import-Module -Name posh-git
-# Start-SshAgent
+Import-Module -Name oh-my-posh
+Set-Theme Paradox
+Start-SshAgent
 
 $global:GitPromptSettings.BeforeText = '['
 $global:GitPromptSettings.AfterText  = '] '
 
 . $PSScriptRoot\admin.ps1
-. $PSScriptRoot\prompt.ps1
+# . $PSScriptRoot\prompt.ps1
 
 
 # Mojo Mortgages settings:
-. $PSScriptRoot\aws.ps1
+# . $PSScriptRoot\mojo-aws.ps1
+
+# UInsure stuff
+. $PSScriptRoot\uinsure.ps1

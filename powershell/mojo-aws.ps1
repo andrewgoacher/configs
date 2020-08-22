@@ -13,7 +13,7 @@ function aws-launch {
     $profile = $role
   }
   write-output "launching $($name) under $($profile)"
-  aws-vault exec $profile --no-session --assume-role-ttl=12h -- $name
+  aws-vault exec $profile --no-session --duration=12h -- $name
 }
 
 function aws-ps {
